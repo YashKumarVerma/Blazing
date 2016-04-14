@@ -41,11 +41,29 @@ class controller
 		// the return[1] -> is method
 		return explode('@', $controller_method);
 	}
-
-
 }
 
-	
+/*************************************************************************** 
+| Light Views Class
+****************************************************************************/
+class render
+{
+	static function view($file,$data=NULL)
+	{
+		if(file_exists("application/public/".$file.".view.php"))
+		{
+			foreach ($data as $name => $value) 
+			{
+				$$name = $value;
+			}
+			include "application/public/".$file.".view.php";
+		}
+		else
+		{
+			error::fatal('3','Undefined View Called !');
+		}
+	}
+}
 
 
 /*************************************************************************** 
