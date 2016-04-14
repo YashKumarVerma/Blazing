@@ -1,3 +1,3 @@
 <?php 
 
-Route::set('home','home@homepage');
+Route::set('users','home@homepage');

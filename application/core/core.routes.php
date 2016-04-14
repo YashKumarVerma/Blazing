@@ -10,7 +10,7 @@ class Route
 	***********************************************/
 	static function set($string, $controller_method)
 	{
-		$request = io::get('url');
+		$request = io::url()[0];
 		if($request == $string)
 		{
 			$controller = controller::extract($controller_method)[0];

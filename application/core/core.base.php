@@ -27,6 +27,11 @@ class io
 			return addslashes($_POST[$i]);
 		}
 	}
+	
+	static function url()
+	{
+	return explode('/', $_GET['url'] );
+	}
 
 }
 

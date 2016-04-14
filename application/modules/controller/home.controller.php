@@ -2,5 +2,5 @@
 
 function homepage()
 {
-	echo "Homepage controller called !";
+	print_r(io::url());
 }
