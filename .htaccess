@@ -9,4 +9,3 @@ RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
  
 RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
-#RewriteRule ^.*$ ./index.php?url=
