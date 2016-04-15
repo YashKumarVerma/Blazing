@@ -65,6 +65,23 @@ class render
 	}
 }
 
+/*************************************************************************** 
+| Load models
+****************************************************************************/
+class model
+{
+	static function load($i)
+	{
+		if(file_exists("application/modules/model/".$i.".model.php"))
+		{
+			include "application/modules/model/".$i.".model.php";
+		}
+		else
+		{
+			error::fatal('Model:1 ','Undefined Model Called !');
+		}
+	}
+}
 
 /*************************************************************************** 
 | Native Code

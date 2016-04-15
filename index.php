@@ -1,5 +1,8 @@
 <?php 
 
+/****************************************************************************
+| laod base module
+*****************************************************************************/
 include "application/core/core.base.php";
 
 
@@ -9,15 +12,21 @@ include "application/core/core.base.php";
 include "application/extensions/extensions.core.php";
 
 
-
-include "application/core/core.processor.php";
-
-
-
+/****************************************************************************
+| laod configurations
+*****************************************************************************/
 include "application/config/config.app.php";
 
 
+/****************************************************************************
+| laod main processor
+*****************************************************************************/
+include "application/core/core.processor.php";
 
+
+/****************************************************************************
+| laod routes
+*****************************************************************************/
 include "application/modules/routes.php";
 
 
