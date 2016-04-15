@@ -60,7 +60,7 @@ class render
 		}
 		else
 		{
-			error::fatal('3','Undefined View Called !');
+			error::fatal('View : 3','Undefined View Called !');
 		}
 	}
 }
@@ -78,7 +78,7 @@ class model
 		}
 		else
 		{
-			error::fatal('Model:1 ','Undefined Model Called !');
+			error::fatal('Model : 1 ','Undefined Model Called !');
 		}
 	}
 }

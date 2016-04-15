@@ -30,8 +30,9 @@ class Route
 			}
 			else
 			{
-				error::fatal('1','undefined controller called');
+				error::fatal('Route : 1','undefined controller called');
 			}
 		}
-	}	
+	}
+
 }

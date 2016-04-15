@@ -1,6 +1,5 @@
 <?php
 
-
 class database
 {
 	var $name;
@@ -56,6 +55,7 @@ class database
 	}
 }
 
+// add as much as db as you want to be called.
 class db extends database
 {
 
