@@ -6,6 +6,10 @@
     "keywords": ["php", "framework", "mvc" , "yash" , "kumar" , "verma"],
     "homepage": "http://yashkumarverma.github.com/Light-PHP-MVC",
     "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "light-php-mvc/latest": "dev-master"
+                },
     "authors": [
         {
             "name": "Yash Kumar Verma",
@@ -14,6 +18,7 @@
             "role": "Developer"
         }
     ],
+    
     "support": {
         "email": "yk.verma2000@gamil.com",
         "issues": "https://github.com/YashKumarVerma/Light-PHP-MVC/issues",
