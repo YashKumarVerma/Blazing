@@ -1,5 +1,5 @@
 {
-    "name": "Light-PHP-MVC/light-php-mvc-framework",
+    "name": "light-php-mvc/light-php-mvc-framework",
     "description": "A very lightwright PHP MVC framwork with advanced features",
     "require": {
         "php": ">=5.3.0"
