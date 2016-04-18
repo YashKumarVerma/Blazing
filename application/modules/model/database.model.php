@@ -104,7 +104,8 @@ class table
 		}
 		else
 		{
-			return $this->connection->error;
+			echo $this->connection->error;
+			return FALSE;
 		}
 	}
 
@@ -128,6 +129,21 @@ class table
 				return "Empty";
 			}
 		}
+	}
+
+	public function delete($condition = 1 )
+	{
+		$query = "DELETE FROM " . $this->name . " WHERE " . $condition . " ;";
+		if($this->connection->query($query) == TRUE)
+		{
+			return TRUE;
+		}
+		else
+		{
+			echo $this->connection->error;
+			return FALSE;
+		}
+		echo $query;
 	}
 }
 

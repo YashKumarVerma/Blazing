@@ -44,5 +44,7 @@ function database()
 	// 	echo "<br />";
 	// }
 	
+	// to delete use
+	// $database->table('users')->delete();
 
 }
