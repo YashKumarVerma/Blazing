@@ -4,7 +4,7 @@
 	<title>Profile of <?= $username ?> </title>
 </head>
 <body>
-<h1> Hello I am <?= $username ?> . </h1> 
+<h1> Hello I am  <?php echo htmlspecialchars($username); ?> -> escaped ! . </h1> 
 	
 </form>
 </body>
