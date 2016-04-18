@@ -46,6 +46,7 @@ function database()
 	
 	// to delete use
 	// $database->table('users')->delete();
-	console($database->table('users')->update(['NAME' => 'yash kumar verma']," `UID`= '1' "));
 
+	// to update use
+	// $database->table('users')->update(['NAME' => 'yash kumar verma']," `UID`= '1' ");
 }
