@@ -1,4 +1,9 @@
 <?php
+/*
+*@author : Yash Kumar Verma
+*@url : https://github.com/YashKumarVerma/Blazing
+*@note : Integrated Blazing Templating Engine (Fastest Engine)
+*/
 
 // change class name as you want to access it
 class blazing 
@@ -70,5 +75,5 @@ class blazing
 
 		}
 	}
-
 }
+
