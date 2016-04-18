@@ -31,9 +31,15 @@ function database()
 	// $data = $database->select("SELECT * FROM users WHERE 1 ;");
 	// foreach ($data as $node) 
 	// {
-	// 	echo "Hello " . $node['NAME'] . "<br>";
+		// echo "Hello " . $node['NAME'] . "<br>";
 	// }
-	console($database->table('users')->all());
-	// console($database);
+
+	// to get all data from table
+	//  $database->table('table-name')->all();
+	// and loop through
+
+	// Insert data using :
+	// $database->table('users')->insert(['name'=>'adam' , 'age' => 21]);
+
 
 }

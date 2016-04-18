@@ -55,21 +55,6 @@ class database
 		}
 	}
 
-	public function all($i)
-	{
-		$query = "SELECT * FROM " . $i . " WHERE 1";
-		$result = $this->connection->query($query);
-		if($result->num_rows > 0)
-		{
-			$output = array();
-			while($row = $result->fetch_assoc())
-			{
-				array_push($output, $row);
-			}
-			return $output;
-		}
-	}
-
 	public function table($table_name)
 	{
 		$this->table = new table($table_name,$this->connection);
@@ -88,7 +73,8 @@ class table
 		$this->table_connection = $connection;
 	}
 
-	function all()
+	// to show all contents
+	public	function all()
 	{
 		$result = $this->table_connection->query("SELECT * FROM " . $this->table_name . " WHERE 1 ;");
 		if($result->num_rows > 0)
@@ -97,6 +83,41 @@ class table
 			{
 				print_r($row);
 			}
+		}
+	}
+
+	// to insert data
+	public function insert($data)
+	{
+		// query building starts
+		$query = "INSERT INTO " . $this->table_name;
+		$query .= ' ( ';
+		foreach ($data as $index => $value)
+		{
+			$query .= '`' . $index . '`' ;
+		}
+		$query .= ' )';
+		$query = str_replace('``', '`,`', $query);
+		$query .= " VALUES( ";
+		foreach ($data as $value)
+		{
+			$query .= " '{$value}' ,"; 
+		}
+		if(strpos(strrev($query),',') == 0 ) 
+			{ 
+			 $query = substr(strrev($query), 1); 
+			 $query = strrev($query);
+			}
+		$query .= ' ); ';
+		// query building ends 
+		
+		if($this->table_connection->query($query) == TRUE)
+		{
+			return TRUE;
+		}
+		else
+		{
+			return $this->table_connection->error;
 		}
 	}
 }
