@@ -29,7 +29,7 @@ class database
 			}
 	}
 
-	public function operation($query)
+	public function query($query)
 	{
 		if($this->connection->query($query) === TRUE)
 		{
