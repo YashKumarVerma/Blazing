@@ -35,5 +35,4 @@ include "application/core/core.processor.php";
 *****************************************************************************/
 include "application/modules/routes.php";
 
-
 // console($_GET);

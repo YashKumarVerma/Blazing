@@ -73,4 +73,3 @@ function notNULL($i)
 | Some native code
 ****************************************************************************/
 isset($_GET['url'])? $_GET['url'] : $_GET['url'] = ''; 
-
