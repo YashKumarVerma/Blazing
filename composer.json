@@ -1,15 +1,11 @@
 {
     "name": "light-php-mvc/latest",
-    "description": "Fastest PHP MVC Framework with supporting templaing engine",
-    "version": "1.0",
+    "description": "Fastest PHP MVC Framework",
+    "version": "1.2",
     "type": "library",
-    "keywords": ["php", "framework", "mvc" , "yash" , "kumar" , "verma"],
+    "keywords": ["php", "mvc" ,"framework", "engine" , "yash" , "kumar" , "verma"],
     "homepage": "http://yashkumarverma.github.com/Light-PHP-MVC",
     "license": "MIT",
-    "minimum-stability": "stable",
-    "require": {
-        "light-php-mvc/latest": "light-php-mvc/latest: dev-master"
-                },
     "authors": [
         {
             "name": "Yash Kumar Verma",
@@ -18,7 +14,6 @@
             "role": "Developer"
         }
     ],
-    
     "support": {
         "email": "yk.verma2000@gamil.com",
         "issues": "https://github.com/YashKumarVerma/Light-PHP-MVC/issues",
