@@ -59,10 +59,13 @@ class blazing
 
 			// calculating again !
 			$this->content = file_get_contents($this->source . '/' . $file);
+			
 			$this->content = str_replace('{{', '<?= $', $this->content);
 			$this->content = str_replace('}}', ' ?>', $this->content);
-			$this->content = str_replace('{!', ' <?php echo stripcslashes($', $this->content);
+
+			$this->content = str_replace('{!', ' <?php echo htmlspecialchars($', $this->content);
 			$this->content = str_replace('!}', '); ?>', $this->content);
+			
 			$handle = fopen($this->cache . '/' . $file . '.blazing.php' ,'w');
 			fwrite($handle, $this->content);
 			fclose($handle);
