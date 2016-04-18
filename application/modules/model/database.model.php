@@ -64,33 +64,20 @@ class database
 
 class table
 {
-	var $table_connection;
-	var $table_name;
+	var $connection;
+	var $name;
 
 	function __construct($name,$connection)
 	{
-		$this->table_name = $name;
-		$this->table_connection = $connection;
-	}
-
-	// to show all contents
-	public	function all()
-	{
-		$result = $this->table_connection->query("SELECT * FROM " . $this->table_name . " WHERE 1 ;");
-		if($result->num_rows > 0)
-		{
-			while($row = $result->fetch_assoc())
-			{
-				print_r($row);
-			}
-		}
+		$this->name = $name;
+		$this->connection = $connection;
 	}
 
 	// to insert data
 	public function insert($data)
 	{
 		// query building starts
-		$query = "INSERT INTO " . $this->table_name;
+		$query = "INSERT INTO " . $this->name;
 		$query .= ' ( ';
 		foreach ($data as $index => $value)
 		{
@@ -111,13 +98,35 @@ class table
 		$query .= ' ); ';
 		// query building ends 
 		
-		if($this->table_connection->query($query) == TRUE)
+		if($this->connection->query($query) == TRUE)
 		{
 			return TRUE;
 		}
 		else
 		{
-			return $this->table_connection->error;
+			return $this->connection->error;
+		}
+	}
+
+	// to get data
+	public function select($conditions = 1)
+	{
+		$query = "SELECT * FROM " . $this->name . " WHERE " . $conditions . " ;";
+		$result = $this->connection->query($query);
+		{
+			if($result->num_rows > 0)
+			{
+				$output = array();
+				while($row = $result->fetch_assoc())
+				{
+					array_push($output,$row);
+				}
+				return $output;
+			}
+			else
+			{
+				return "Empty";
+			}
 		}
 	}
 }

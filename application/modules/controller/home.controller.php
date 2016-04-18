@@ -34,12 +34,15 @@ function database()
 		// echo "Hello " . $node['NAME'] . "<br>";
 	// }
 
-	// to get all data from table
-	//  $database->table('table-name')->all();
-	// and loop through
-
 	// Insert data using :
 	// $database->table('users')->insert(['name'=>'adam' , 'age' => 21]);
 
+	// get data using . If want all rows, pass no parameter
+	// $data = $database->table('users')->select();
+	// foreach ($data as $value) {
+	// 	print_r($value) ;
+	// 	echo "<br />";
+	// }
+	
 
 }
