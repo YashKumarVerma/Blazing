@@ -131,6 +131,7 @@ class table
 		}
 	}
 
+	// to delete that 
 	public function delete($condition = 1 )
 	{
 		$query = "DELETE FROM " . $this->name . " WHERE " . $condition . " ;";
@@ -145,6 +146,27 @@ class table
 		}
 		echo $query;
 	}
+
+	// to update database
+	public function update($fields , $condition = 1)
+	{
+		$query = "UPDATE " . $this->name . " SET ";
+		foreach ($fields as $index => $value) {
+			$query .= "`" . $index . "` = '" . $value . "' ";
+		}
+		$query.= "WHERE " . $condition;
+		if($this->connection->query($query) == TRUE)
+			{
+				return TRUE;
+			}
+		else
+		{
+			echo $this->connection->error;
+			echo $query;
+			return FALSE;
+		}
+	}
+
 }
 
 
