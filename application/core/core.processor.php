@@ -44,26 +44,9 @@ class controller
 }
 
 /*************************************************************************** 
-| Light Views Class
+| Views Class
 ****************************************************************************/
-class render
-{
-	static function view($file,$data=NULL)
-	{
-		if(file_exists("application/public/".$file.".view.php"))
-		{
-			foreach ($data as $name => $value) 
-			{
-				$$name = $value;
-			}
-			include "application/public/".$file.".view.php";
-		}
-		else
-		{
-			error::fatal('View : 3','Undefined View Called !');
-		}
-	}
-}
+//  use blazer()
 
 /*************************************************************************** 
 | Load models

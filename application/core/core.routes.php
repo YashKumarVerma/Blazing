@@ -35,10 +35,10 @@ class Route
 		}
 	}
 
-	static function post($string,$controller_method,$field)
+	static function post($string,$controller_method)
 	{
 		$request = io::url()[0];
-		if($request == $string && isset($_POST[$field]) )
+		if($request == $string && count($_POST) != 0 )
 		{
 
 			$controller = controller::extract($controller_method)[0];
