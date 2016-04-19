@@ -81,14 +81,14 @@ class table
 		$query .= ' ( ';
 		foreach ($data as $index => $value)
 		{
-			$query .= '`' . $index . '`' ;
+			$query .= '`' . addslashes($index) . '`' ;
 		}
 		$query .= ' )';
 		$query = str_replace('``', '`,`', $query);
 		$query .= " VALUES( ";
 		foreach ($data as $value)
 		{
-			$query .= " '{$value}' ,"; 
+			$query .= " '".addslashes($value)."' ,"; 
 		}
 		if(strpos(strrev($query),',') == 0 ) 
 			{ 
@@ -112,7 +112,7 @@ class table
 	// to get data
 	public function select($conditions = 1)
 	{
-		$query = "SELECT * FROM " . $this->name . " WHERE " . $conditions . " ;";
+		$query = "SELECT * FROM " . $this->name . " WHERE " . addslashes($conditions) . " ;";
 		$result = $this->connection->query($query);
 		{
 			if($result->num_rows > 0)
@@ -134,7 +134,7 @@ class table
 	// to delete that 
 	public function delete($condition = 1 )
 	{
-		$query = "DELETE FROM " . $this->name . " WHERE " . $condition . " ;";
+		$query = "DELETE FROM " . $this->name . " WHERE " . addslashes($condition) . " ;";
 		if($this->connection->query($query) == TRUE)
 		{
 			return TRUE;
@@ -144,7 +144,6 @@ class table
 			echo $this->connection->error;
 			return FALSE;
 		}
-		echo $query;
 	}
 
 	// to update database
@@ -152,7 +151,7 @@ class table
 	{
 		$query = "UPDATE " . $this->name . " SET ";
 		foreach ($fields as $index => $value) {
-			$query .= "`" . $index . "` = '" . $value . "' ";
+			$query .= "`" . addslashes($index) . "` = '" . addslashes($value) . "' ";
 		}
 		$query.= "WHERE " . $condition;
 		if($this->connection->query($query) == TRUE)
@@ -162,7 +161,6 @@ class table
 		else
 		{
 			echo $this->connection->error;
-			echo $query;
 			return FALSE;
 		}
 	}
