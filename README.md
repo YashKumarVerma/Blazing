@@ -1,8 +1,8 @@
 # A (very) Lightweight PHP MVC Framework
 Light PHP MVC --latest branch
 
-Documentation : http://yashkumarverma.github.io/Light-PHP-MVC/
+Download from https://github.com/Blazing-PHP/Blazing-The-Framework/releases/latest
 
-Download v1.0 from https://github.com/YashKumarVerma/Light-PHP-MVC/releases -- released
+Documentation :http://blazing-php.github.io/Blazing-The-Framework
 
-Download extensions from https://github.com/YashKumarVerma/Light-PHP-MVC/tree/extensions --extensions
+Download extensions from https://github.com/Blazing-PHP/Blazing-The-Framework/tree/extensions
