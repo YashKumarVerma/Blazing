@@ -1,15 +1,15 @@
 <?php
 
 model::load('database');
-model::load('blazing');
+model::load('blazer');
 
 function homepage()
 {
 	$username = io::url()[1];
 	$data = ['username' => $username];
 
-	$view = new blazing();
-	$view->render('profile.html',$data);
+	$view = new blazer();
+	$view->render('profile.html',$data,TRUE);
 }
 
 	

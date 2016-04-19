@@ -6,7 +6,7 @@
 */
 
 // change class name as you want to access it
-class blazing 
+class blazer
 {
 	// $source contains directory of source files
 	var $source;
@@ -60,12 +60,17 @@ class blazing
 			// calculating again !
 			$this->content = file_get_contents($this->source . '/' . $file);
 			
+			// {{data}}
 			$this->content = str_replace('{{', '<?= $', $this->content);
 			$this->content = str_replace('}}', ' ?>', $this->content);
 
+			//  {!data!}
 			$this->content = str_replace('{!', ' <?php echo htmlspecialchars($', $this->content);
 			$this->content = str_replace('!}', '); ?>', $this->content);
 			
+			// @url
+			$this->content = str_replace('@url', replace, subject)
+
 			$handle = fopen($this->cache . '/' . $file . '.blazing.php' ,'w');
 			fwrite($handle, $this->content);
 			fclose($handle);
@@ -75,7 +80,6 @@ class blazing
 					$$index = $value;
 				}
 			include_once ($this->cache . '/' . $file . '.blazing.php');
-
 		}
 	}
 }

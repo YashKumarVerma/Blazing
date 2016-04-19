@@ -5,6 +5,8 @@
 </head>
 <body>
 <h1> Hello I am  <?php echo htmlspecialchars($username); ?> -> escaped ! . </h1> 
+
+
 	
 </form>
 </body>
