@@ -68,8 +68,6 @@ class blazer
 			$this->content = str_replace('{!', ' <?php echo htmlspecialchars($', $this->content);
 			$this->content = str_replace('!}', '); ?>', $this->content);
 			
-			// @url
-			$this->content = str_replace('@url', replace, subject)
 
 			$handle = fopen($this->cache . '/' . $file . '.blazing.php' ,'w');
 			fwrite($handle, $this->content);
