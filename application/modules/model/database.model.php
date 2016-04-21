@@ -176,6 +176,8 @@ class db extends database
 
 
 /*
+model::load('blazer');
+
 function database()
 {
 	// or use new database();

@@ -85,6 +85,7 @@ class blazer
 
 
 /*
+model::load('database');
 
 	$data = ['username' => $username];
 
