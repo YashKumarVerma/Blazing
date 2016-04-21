@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Blazer Demo </title>
+	<?php css("home.css"); ?>
 </head>
 <body>
 
