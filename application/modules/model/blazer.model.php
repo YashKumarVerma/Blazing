@@ -5,6 +5,36 @@
 *@note : Integrated Blazing Templating Engine (Fastest Engine)
 */
 
+// local functions
+function css($link)
+{
+	echo '<link rel="stylesheet" type="text/css" href="'.$GLOBALS['protected']['app']['assets']['css'].$link.'">';
+}
+
+function script($link)
+{
+	echo '<script type="text/javascript" src="'.$GLOBALS['protected']['app']['assets']['js'].$link.'"></script>';
+}
+
+function plugin($plugin_autoload_file)
+{
+	if(file_exists("assets/plugins/".$plugin_autoload_file))
+	{
+		$content = file_get_contents("assets/plugins/".$plugin_autoload_file);
+		$content = json_decode($content,TRUE);
+		foreach($content['css'] as $css){
+			echo '<link rel="stylesheet" type="text/css" href="'.$css.'">  '; 
+		}
+		foreach ($content['js'] as $js){
+				echo '<script type="text/javascript" src="'.$js.'"></script>';
+		}
+	}
+	else
+	{
+		echo "AUTOLOAD FILE NOT FOUND !";		
+	}
+}
+
 // change class name as you want to access it
 class blazer
 {
@@ -78,6 +108,10 @@ class blazer
 			// {#file.js#}
 			$this->content = str_replace('{#', '<?php script("', $this->content);
 			$this->content = str_replace('#}', '"); ?>', $this->content);
+
+			// {auto(bootstrap.json)}
+			$this->content = str_replace('{plugin(', '<?php plugin("', $this->content);
+			$this->content = str_replace(')}', '"); ?>', $this->content);
 
 			// {{data}}
 			$this->content = str_replace('{{', '<?= $', $this->content);

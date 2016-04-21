@@ -16,5 +16,5 @@ function blazer()
 	// plugin('bootstrap/autoload.json');
 	$view = new blazer();
 	$data['user'] = "Yash Kumar Verma";
-	$view->render('home.blazer.html',$data,FALSE);
+	$view->render('home.blazer.html',$data,TRUE);
 }

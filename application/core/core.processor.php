@@ -69,35 +69,8 @@ class render
  }
 
 /* ************************ USER FUNCTIONS *******************************/
-function css($link)
-{
-	echo '<link rel="stylesheet" type="text/css" href="'.$GLOBALS['protected']['app']['assets']['css'].$link.'">';
-}
+//  integrated to blazer files
 
-function script($link)
-{
-	echo '<script type="text/javascript" src="'.$GLOBALS['protected']['app']['assets']['js'].$link.'"></script>';
-}
-
-function plugin($plugin_autoload_file)
-{
-	if(file_exists("assets/plugins/".$plugin_autoload_file))
-	{
-		$content = file_get_contents("assets/plugins/".$plugin_autoload_file);
-		$content = json_decode($content,TRUE);
-		foreach($content['css'] as $css){
-			echo '<link rel="stylesheet" type="text/css" href="'.$css.'">  '; 
-		}
-		foreach ($content['js'] as $js){
-				echo '<script type="text/javascript" src="'.$js.'"></script>';
-		}
-	}
-	else
-	{
-		echo "AUTOLOAD FILE NOT FOUND !";		
-	}
-}
-//  use blazer for templating
 
 /*************************************************************************** 
 | Load models
