@@ -5,10 +5,7 @@
     "type": "library",
     "keywords": ["php", "mvc" ,"framework", "engine" , "yash" , "kumar" , "verma"],
     "homepage": "https://github.com/Blazing-PHP/Blazing-The-Framework",
-    "license": "MIT",
-    "require": {
-        "blazing/blazer-templating-engine" : "dev-master"
-    }, 
+    "license": "MIT", 
     "authors": [
         {
             "name": "Yash Kumar Verma",
