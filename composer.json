@@ -1,7 +1,7 @@
 {
     "name": "blazing/blazing",
     "description": "Fastest PHP MVC Framework",
-    "version": "1.8.0.1.",
+    "version": "1.8.0.4.",
     "type": "library",
     "keywords": ["php", "mvc" ,"framework", "engine" , "yash" , "kumar" , "verma"],
     "homepage": "https://github.com/Blazing-PHP/Blazing-The-Framework",
