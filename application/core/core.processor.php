@@ -67,6 +67,13 @@ class render
  		}
  	}
  }
+
+/* ************************ USER FUNCTIONS *******************************/
+function css($link)
+{
+	echo '<link rel="stylesheet" type="text/css" href="'.$GLOBALS['protected']['app']['assets']['css'].$link.'">';
+}
+
 //  use blazer for templating
 
 /*************************************************************************** 
