@@ -3,6 +3,7 @@
 <head>
 	<title>Blazer Demo </title>
 	<?php css("home.css"); ?>
+	<?php script("error.js"); ?>
 </head>
 <body>
 

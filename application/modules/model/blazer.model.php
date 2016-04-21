@@ -75,7 +75,9 @@ class blazer
 			$this->content = str_replace('{.', '<?php css("', $this->content);
 			$this->content = str_replace('.}', '"); ?>', $this->content);
 
-			//
+			// {#file.js#}
+			$this->content = str_replace('{#', '<?php script("', $this->content);
+			$this->content = str_replace('#}', '"); ?>', $this->content);
 
 			// {{data}}
 			$this->content = str_replace('{{', '<?= $', $this->content);
