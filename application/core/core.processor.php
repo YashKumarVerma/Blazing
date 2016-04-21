@@ -52,9 +52,12 @@ class render
  	{
  		if(file_exists("application/public/".$file.".php"))
  		{
- 			foreach ($data as $name => $value) 
+ 			if(is_array($data))
  			{
- 				$$name = $value;
+ 				foreach ($data as $name => $value) 
+	 			{
+	 				$$name = $value;
+	 			}
  			}
  			include "application/public/".$file.".php";
  		}
@@ -64,7 +67,7 @@ class render
  		}
  	}
  }
-//  use blazer()
+//  use blazer for templating
 
 /*************************************************************************** 
 | Load models
