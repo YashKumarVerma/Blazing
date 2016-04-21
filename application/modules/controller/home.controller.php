@@ -12,13 +12,6 @@ function homepage()
 	$view->render('profile.html',$data,TRUE);
 }
 
-	
-function post_controller()
-{
-	console($_POST);
-}
-
-
 function database()
 {
 	// or use new database();
@@ -49,4 +42,14 @@ function database()
 
 	// to update use
 	// $database->table('users')->update(['NAME' => 'yash kumar verma']," `UID`= '1' ");
+}
+
+function test($input)
+{
+	console($input);
+}
+
+function admin($input)
+{
+	console($input);
 }

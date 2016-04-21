@@ -30,7 +30,7 @@ class io
 	
 	static function url()
 	{
-	return explode('/', $_GET['url'] );
+		return explode('/', $_GET['url'] );
 	}
 
 }
