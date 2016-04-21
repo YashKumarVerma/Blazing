@@ -13,11 +13,6 @@ static function set($string , $controller_method)
 		$broken_url = explode('/', io::get('url'));
 		$broken_string = explode('/', $string);
 
-		// echo "URL";
-		// // console($broken_url);
-		// echo "STRING";
-		// // console($broken_string);
-
 		$data_to_pass = array();
 		$error = 0;
 
@@ -36,7 +31,6 @@ if(count($broken_url) == count($broken_string))
 				if($broken_string[$i] != $broken_url[$i])
 				{
 					$error++;
-					// echo $error . "<br>";
 				}
 			}
 		}
