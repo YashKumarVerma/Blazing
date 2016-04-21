@@ -39,14 +39,17 @@ class blazer
 		{
 			if(file_exists($this->cache . '/' . $file . '.blazing.php'))
 			{
-				foreach ($data as $index => $value) {
+				if(is_array($data))
+				{
+					foreach ($data as $index => $value) {
 					$$index = $value;
+					}
 				}
 				include_once ($this->cache . '/' . $file . '.blazing.php');
 			}
 			else
 			{
-				$this->render($file,$data,TRUE);
+				$this->render($file,$data,FALSE);
 			}
 		}
 		else
@@ -80,9 +83,12 @@ class blazer
 			fclose($handle);
 
 			// include it man !
-			foreach ($data as $index => $value) {
+			if(is_array($data))
+			{
+				foreach ($data as $index => $value) {
 					$$index = $value;
 				}
+			}
 			include_once ($this->cache . '/' . $file . '.blazing.php');
 		}
 	}
