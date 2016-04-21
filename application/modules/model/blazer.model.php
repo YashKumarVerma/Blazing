@@ -60,15 +60,21 @@ class blazer
 			// calculating again !
 			$this->content = file_get_contents($this->source . '/' . $file);
 			
-			// {{data}}
-			$this->content = str_replace('{{', '<?= $', $this->content);
-			$this->content = str_replace('}}', ' ?>', $this->content);
 
 			//  {!data!}
 			$this->content = str_replace('{!', ' <?php echo htmlspecialchars($', $this->content);
 			$this->content = str_replace('!}', '); ?>', $this->content);
 			
+			// {{@url}}
+			$this->content = str_replace('{{@url', '<?php echo $GLOBALS["protected"]["app"]["url"]' , $this->content);
+			
+			// {{data}}
+			$this->content = str_replace('{{', '<?= $', $this->content);
 
+			// for closing
+			$this->content = str_replace('}}', ' ?>', $this->content);
+
+			
 			$handle = fopen($this->cache . '/' . $file . '.blazing.php' ,'w');
 			fwrite($handle, $this->content);
 			fclose($handle);
