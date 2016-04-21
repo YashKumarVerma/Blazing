@@ -33,9 +33,9 @@ class blazer
 		$this->cache = $i;
 	}
 
-	public function render($file,$data,$re_calculate = FALSE)
+	public function render($file,$data,$turbo = FALSE)
 	{
-		if($re_calculate == FALSE)
+		if($turbo == TRUE)
 		{
 			if(file_exists($this->cache . '/' . $file . '.blazing.php'))
 			{
