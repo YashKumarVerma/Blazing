@@ -46,6 +46,24 @@ class controller
 /*************************************************************************** 
 | Views Class
 ****************************************************************************/
+class render
+ {
+ 	static function view($file,$data=NULL)
+ 	{
+ 		if(file_exists("application/public/".$file.".php"))
+ 		{
+ 			foreach ($data as $name => $value) 
+ 			{
+ 				$$name = $value;
+ 			}
+ 			include "application/public/".$file.".php";
+ 		}
+ 		else
+ 		{
+ 			error::fatal('3','Undefined View Called !');
+ 		}
+ 	}
+ }
 //  use blazer()
 
 /*************************************************************************** 

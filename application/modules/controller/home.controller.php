@@ -43,13 +43,3 @@ function database()
 	// to update use
 	// $database->table('users')->update(['NAME' => 'yash kumar verma']," `UID`= '1' ");
 }
-
-function test($input)
-{
-	console($input);
-}
-
-function admin($input)
-{
-	console($input);
-}
