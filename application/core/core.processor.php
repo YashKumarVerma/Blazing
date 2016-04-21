@@ -74,6 +74,24 @@ function css($link)
 	echo '<link rel="stylesheet" type="text/css" href="'.$GLOBALS['protected']['app']['assets']['css'].$link.'">';
 }
 
+function script($link)
+{
+	echo '<script type="text/javascript" src="'.$GLOBALS['protected']['app']['assets']['js'].$link.'"></script>';
+}
+
+function plugin($plugin_autoload_file)
+{
+	if(file_exists("assets/plugins/".$plugin_autoload_file))
+	{
+		$content = file_get_contents("assets/plugins/".$plugin_autoload_file);
+		$content = json_decode($content);
+		console($content);
+	}
+	else
+	{
+		echo "AUTOLOAD FILE NOT FOUND !";		
+	}
+}
 //  use blazer for templating
 
 /*************************************************************************** 
