@@ -15,7 +15,7 @@ class blazer
 	// re-calculating render
 	var $content;
 
-	function __construct($source = "application/public" , $cache = "application/public/blazing_cache")
+	function __construct($source = "application/public" , $cache = "application/public/blazing_compiled")
 	{
 		$this->source = $source;
 		$this->cache = $cache;
