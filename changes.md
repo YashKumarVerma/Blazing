@@ -15,9 +15,9 @@
 
 
 ## CHANGES in   1.8.0.0 < changes <= 1.8.1.0
--BLAZER
-	* NEW : Link css using {.file.css.}
-	* NEW : Link script using {#file.js#}
-	* NEW :Added JSON Based Autolaod Module for plugins
-	* Declare Autoload Config in `assets/plugins/autoload.json` files.
-	* Link Autoloads by `{plugin(bootstrap/autoload.json)}` SEE `application/public/home.blazer.html` for more.
+#### BLAZER
+- NEW : Link css using {.file.css.}
+- NEW : Link script using {#file.js#}
+- NEW :Added JSON Based Autolaod Module for plugins
+- Declare Autoload Config in `assets/plugins/autoload.json` files.
+- Link Autoloads by `{plugin(bootstrap/autoload.json)}` SEE `application/public/home.blazer.html` for more.
