@@ -81,3 +81,14 @@ class blazer
 		}
 	}
 }
+
+
+
+/*
+
+	$data = ['username' => $username];
+
+	$view = new blazer();
+	$view->render('profile.html',$data,TRUE);
+
+*/
