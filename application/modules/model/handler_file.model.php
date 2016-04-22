@@ -67,6 +67,11 @@ class file_helper_class
 	}
 
 	// to append files
+	public function append($data)
+	{
+		$temp = file_get_contents($this->file_location);
+		return file_put_contents($this->file_location, $temp . $data);
+	}
 
 }
 
