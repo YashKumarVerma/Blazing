@@ -21,12 +21,3 @@ function blazer()
 	$view->render('home.blazer.html',$data,FALSE);
 	// set last parameter TRUE to enable turbo mode
 }
-
-function file_handler()
-{
-	$handle = new handler;
-	console(
-			// $handle->file('new_file.md')->create()
-			$handle->file('new_file.md')->delete()
-	);
-}
