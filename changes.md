@@ -21,3 +21,7 @@
 - NEW :Added JSON Based Autolaod Module for plugins
 - Declare Autoload Config in `assets/plugins/autoload.json` files.
 - Link Autoloads by `{plugin(bootstrap/autoload.json)}` SEE `application/public/home.blazer.html` for more.
+
+#### Routes*
+- Added Post type route. Called when post request made.
+
