@@ -28,13 +28,16 @@
             .title {
                 font-size: 96px;
             }
+            .heart{
+                color:darkorange;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
                 <div class="title">Blazing</div>
-                    <p><i>The Fastest PHP Framework</i></p>
+                    <p><i>Made with <span class='heart'>&#10084;</span> in India</i></p>
             </div>
            <!-- 
         </div> -->

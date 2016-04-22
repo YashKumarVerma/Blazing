@@ -8,7 +8,8 @@ function cover()
 	// render::view('home.cover');
 	// OR
 	$view = new blazer();
-	$view->render('home.cover.php',$data=NULL,TRUE);
+	$view->render('home.cover.php',$data=NULL,FALSE);
+	// set last parameter TRUE to enable turbo mode
 }
 
 function blazer()
@@ -16,5 +17,7 @@ function blazer()
 	// plugin('bootstrap/autoload.json');
 	$view = new blazer();
 	$data['user'] = "Yash Kumar Verma";
-	$view->render('home.blazer.html',$data,TRUE);
+	$view->render('home.blazer.html',$data,FLASE);
+	// set last parameter TRUE to enable turbo mode
+
 }
