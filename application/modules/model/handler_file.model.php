@@ -79,6 +79,12 @@ class file_helper_class
 		return file_put_contents($this->file_location, "");
 	}
 
+	// to delete file
+	public function delete()
+	{
+		return unlink($this->file_location);
+	}
+
 }
 
 
@@ -102,7 +108,9 @@ class file_helper_class
 ~ $handle->file('file.md')->append('add this text');
 
 * To Clear entire data but dont delete file
-~ $handle->file('new_file.md')->clear()
+~ $handle->file('new_file.md')->clear();
 
+* To delete file
+~ $handle->file('new_file.md')->delete();
 
 */
