@@ -22,6 +22,32 @@
 - Declare Autoload Config in `assets/plugins/autoload.json` files.
 - Link Autoloads by `{plugin(bootstrap/autoload.json)}` SEE `application/public/home.blazer.html` for more.
 
-#### Routes*
+#### Routes
 - Added Post type route. Called when post request made.
 
+#### Models
+- Added file model
+
+- Initialize the handler by:
+~ $handler = new handler;
+
+- Load a file as target by:
+~ $handler->file('filename');
+
+- Load the contents of target file by
+~ $handler->file('filename')->read();
+
+- To create new file
+~ $handler->file('desired name')->create();
+
+- To write to file
+~ $handle->file('new_file.md')->write('i am yash');
+
+- To append to previous data
+~ $handle->file('file.md')->append('add this text');
+
+- To Clear entire data but dont delete file
+~ $handle->file('new_file.md')->clear();
+
+- To delete file
+~ $handle->file('new_file.md')->delete();

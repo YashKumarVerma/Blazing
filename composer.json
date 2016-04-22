@@ -3,7 +3,7 @@
     "description": "Fastest PHP MVC Framework",
     "version": "1.8.0.7.",
     "type": "library",
-    "keywords": ["php", "mvc" ,"framework", "engine" , "yash" , "kumar" , "verma"],
+    "keywords": ["php", "mvc" ,"framework", "engine" , "yash" , "kumar" , "verma" , "blazing/blazing" , "blazer"],
     "homepage": "https://github.com/Blazing-PHP/Blazing-The-Framework",
     "license": "MIT", 
     "authors": [
