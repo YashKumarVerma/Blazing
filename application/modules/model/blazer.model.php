@@ -5,35 +5,6 @@
 *@note : Integrated Blazing Templating Engine (Fastest Engine)
 */
 
-// local functions
-function css($link)
-{
-	echo '<link rel="stylesheet" type="text/css" href="'.$GLOBALS['protected']['app']['assets']['css'].$link.'">';
-}
-
-function script($link)
-{
-	echo '<script type="text/javascript" src="'.$GLOBALS['protected']['app']['assets']['js'].$link.'"></script>';
-}
-
-function plugin($plugin_autoload_file)
-{
-	if(file_exists("assets/plugins/".$plugin_autoload_file))
-	{
-		$content = file_get_contents("assets/plugins/".$plugin_autoload_file);
-		$content = json_decode($content,TRUE);
-		foreach($content['css'] as $css){
-			echo '<link rel="stylesheet" type="text/css" href="'.$css.'">  '; 
-		}
-		foreach ($content['js'] as $js){
-				echo '<script type="text/javascript" src="'.$js.'"></script>';
-		}
-	}
-	else
-	{
-		echo "AUTOLOAD FILE NOT FOUND !";		
-	}
-}
 
 // change class name as you want to access it
 class blazer
@@ -102,15 +73,15 @@ class blazer
 			$this->content = str_replace('{{@url', '<?php echo $GLOBALS["protected"]["app"]["url"]' , $this->content);
 			
 			// 	{.home.css.} -> loa css like a boss
-			$this->content = str_replace('{.', '<?php css("', $this->content);
+			$this->content = str_replace('{.', '<?php blazer::css("', $this->content);
 			$this->content = str_replace('.}', '"); ?>', $this->content);
 
 			// {#file.js#}
-			$this->content = str_replace('{#', '<?php script("', $this->content);
+			$this->content = str_replace('{#', '<?php blazer::script("', $this->content);
 			$this->content = str_replace('#}', '"); ?>', $this->content);
 
 			// {auto(bootstrap.json)}
-			$this->content = str_replace('{plugin(', '<?php plugin("', $this->content);
+			$this->content = str_replace('{plugin(', '<?php blazer::plugin("', $this->content);
 			$this->content = str_replace(')}', '"); ?>', $this->content);
 
 			// {{data}}
@@ -134,9 +105,37 @@ class blazer
 			include_once ($this->cache . '/' . $file . '.blazing.php');
 		}
 	}
+
+	static function script($link)
+	{
+		echo '<script type="text/javascript" src="'.$GLOBALS['protected']['app']['assets']['js'].$link.'"></script>';
+	}
+
+	static function plugin($plugin_autoload_file)
+	{
+		if(file_exists("assets/plugins/".$plugin_autoload_file))
+		{
+			$content = file_get_contents("assets/plugins/".$plugin_autoload_file);
+			$content = json_decode($content,TRUE);
+			foreach($content['css'] as $css){
+				echo '<link rel="stylesheet" type="text/css" href="'.$css.'">  '; 
+			}
+			foreach ($content['js'] as $js){
+					echo '<script type="text/javascript" src="'.$js.'"></script>';
+			}
+		}
+		else
+		{
+			echo "AUTOLOAD FILE NOT FOUND !";		
+		}
+	}
+
+	static function css($link)
+	{
+		echo '<link rel="stylesheet" type="text/css" href="'.$GLOBALS['protected']['app']['assets']['css'].$link.'">';
+	}
+
 }
-
-
 
 /*
 model::load('database');

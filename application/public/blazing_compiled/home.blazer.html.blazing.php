@@ -3,13 +3,13 @@
 <head>
 	<title>Blazer Demo </title>
 	<!-- load css files  -->
-	<?php css("home.css"); ?>
+	<?php blazer::css("home.css"); ?>
 
 	<!-- load js files -->
-	<?php script("error.js"); ?>
+	<?php blazer::script("error.js"); ?>
 
 	<!-- to autoload entire plugin link bootstrap-->
-	<?php plugin("bootstrap/autoload.json"); ?>
+	<?php blazer::plugin("bootstrap/autoload.json"); ?>
 
 </head>
 <body>

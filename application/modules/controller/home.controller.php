@@ -17,7 +17,6 @@ function blazer()
 	// plugin('bootstrap/autoload.json');
 	$view = new blazer();
 	$data['user'] = "Yash Kumar Verma";
-	$view->render('home.blazer.html',$data,FLASE);
+	$view->render('home.blazer.html',$data,FALSE);
 	// set last parameter TRUE to enable turbo mode
-
 }
