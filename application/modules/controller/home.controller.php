@@ -1,6 +1,7 @@
 <?php
 
 model::load('blazer');
+model::load('handler_file');
 
 // declare new function
 function cover()
@@ -19,4 +20,12 @@ function blazer()
 	$data['user'] = "Yash Kumar Verma";
 	$view->render('home.blazer.html',$data,FALSE);
 	// set last parameter TRUE to enable turbo mode
+}
+
+function file_handler()
+{
+	$handle = new handler;
+	console(
+			$handle->file('README.md')->read()
+	);
 }
