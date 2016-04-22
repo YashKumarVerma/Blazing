@@ -55,6 +55,7 @@ class file_helper_class
 		else
 		{
 			// file created
+			fopen($this->file_location, "w");
 			return TRUE;
 		}
 	}

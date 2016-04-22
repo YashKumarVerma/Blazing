@@ -26,6 +26,6 @@ function file_handler()
 {
 	$handle = new handler;
 	console(
-			$handle->file('new_file.md')
+			$handle->file('new_file.md')->create()
 	);
 }
