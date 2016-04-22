@@ -60,6 +60,13 @@ class file_helper_class
 		}
 	}
 
+	// to write files
+	public function write($data)
+	{
+		return file_put_contents($this->file_location, $data);
+	}
+
+	// to append files
 
 }
 
@@ -73,5 +80,12 @@ class file_helper_class
 
 * Load the contents of target file by
 @ $handler->file('filename')->read();
+
+* To create new file
+@ $handler->file('desired name')->create();
+
+* To write to file
+@ $handle->file('new_file.md')->write('i am yash')
+
 
 */

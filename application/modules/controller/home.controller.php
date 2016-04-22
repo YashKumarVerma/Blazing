@@ -26,6 +26,7 @@ function file_handler()
 {
 	$handle = new handler;
 	console(
-			$handle->file('new_file.md')->create()
+			// $handle->file('new_file.md')->create()
+			// $handle->file('new_file.md')->write('i am yash')
 	);
 }
