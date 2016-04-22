@@ -73,24 +73,36 @@ class file_helper_class
 		return file_put_contents($this->file_location, $temp . $data);
 	}
 
+	// to clear file
+	public function clear()
+	{
+		return file_put_contents($this->file_location, "");
+	}
+
 }
 
 
 /*************************************************************
 *Initialize the handler by:
-@ $handler = new handler;
+~ $handler = new handler;
 
 * Load a file as target by:
-@ $handler->file('filename');
+~ $handler->file('filename');
 
 * Load the contents of target file by
-@ $handler->file('filename')->read();
+~ $handler->file('filename')->read();
 
 * To create new file
-@ $handler->file('desired name')->create();
+~ $handler->file('desired name')->create();
 
 * To write to file
-@ $handle->file('new_file.md')->write('i am yash')
+~ $handle->file('new_file.md')->write('i am yash');
+
+* To append to previous data
+~ $handle->file('file.md')->append('add this text');
+
+* To Clear entire data but dont delete file
+~ $handle->file('new_file.md')->clear()
 
 
 */
