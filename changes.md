@@ -61,3 +61,7 @@
 
 - To delete controller
 ~ $ php sahayak controller delete ControllerName
+
+
+__TODO__
+- blazing command to compile all template
