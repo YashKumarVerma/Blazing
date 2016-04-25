@@ -10,6 +10,3 @@ Load the module
 *****************************************/
 
 require_once "application/sahayak/load.php";
-
-
-print_r(exec("git add ."));
