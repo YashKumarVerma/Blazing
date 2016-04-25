@@ -72,6 +72,9 @@ class blazer
 			// {{@url}}
 			$this->content = str_replace('{{@url', '<?php echo $GLOBALS["protected"]["app"]["url"]' , $this->content);
 			
+			// {{@name}}
+			$this->content = str_replace('{{@name', '<?php echo $GLOBALS["protected"]["app"]["name"]', $this->content);
+
 			// 	{.home.css.} -> loa css like a boss
 			$this->content = str_replace('{.', '<?php blazer::css("', $this->content);
 			$this->content = str_replace('.}', '"); ?>', $this->content);
