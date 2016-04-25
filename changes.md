@@ -51,3 +51,7 @@
 
 - To delete file
 ~ $handle->file('new_file.md')->delete();
+
+
+#### Sahayak
+- Introduced Sahayak, the command line tool for Blazing
