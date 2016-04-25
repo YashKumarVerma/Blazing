@@ -55,3 +55,9 @@
 
 #### Sahayak
 - Introduced Sahayak, the command line tool for Blazing
+
+- To create controller
+~ $ php sahayak controller create ControllerName
+
+- To delete controller
+~ $ php sahayak controller delete ControllerName
