@@ -8,3 +8,9 @@ if(count($argv) == 1)
 {
 	include "components/no_para_passed_home.php";
 }
+
+
+if(isset($argv[1]) && $argv[1] == 'controller')
+{
+	include "components/sahayak.component.domain.controller.php";
+}
