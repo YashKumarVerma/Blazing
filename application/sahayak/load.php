@@ -14,3 +14,8 @@ if(isset($argv[1]) && $argv[1] == 'controller')
 {
 	include "components/sahayak.component.domain.controller.php";
 }
+
+if(isset($argv[1]) && $argv[1] == 'blazer' )
+{
+	include "components/sahayak.component.domain.blazer.php";
+}
