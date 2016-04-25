@@ -21,3 +21,8 @@ function blazer()
 	$view->render('home.blazer.html',$data,FALSE);
 	// set last parameter TRUE to enable turbo mode
 }
+
+function workspace()
+{
+	echo "hello !";
+}
