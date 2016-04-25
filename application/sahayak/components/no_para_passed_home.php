@@ -1,21 +1,21 @@
 
-___________________________________________________
-===================================================
----------------------------------------------------
+	___________________________________________________
+	===================================================
+	---------------------------------------------------
 
-  Sahayak : Command Line Utility for Blazing
+	  Sahayak : Command Line Utility for Blazing
 
----------------------------------------------------
+	---------------------------------------------------
 
-Basic Syntax :-
-$ php sahayak <domain> <sub-domain> <arguments>
+	Basic Syntax :-
+	$ php sahayak <domain> <sub-domain> <arguments>
 
---------------------------------------------------- 
+	--------------------------------------------------- 
 
-Domains :-
-	controller
-	blazer
+	Domains :-
+		controller
+		blazer
 
-Subdomains :-
-	Controller :-
-		create
+	Subdomains :-
+		Controller :-
+			create

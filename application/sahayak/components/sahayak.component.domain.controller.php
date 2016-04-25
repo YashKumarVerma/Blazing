@@ -21,6 +21,7 @@ if(isset($argv[1]) && isset($argv[2]) && !isset($argv[3]))
 if(isset($argv[1]) && isset($argv[2]) && isset($argv[3]) )
 {
 
+	// to create controller
 	if($argv[1] == "controller" && $argv[2] == "create" )
 	{
 		// create new file
@@ -38,7 +39,22 @@ if(isset($argv[1]) && isset($argv[2]) && isset($argv[3]) )
 		echo "Controller Named " . $argv[3] . " successfully created.";
 	}
 
+	if($argv[1] == "controller" && $argv[2] == "delete" )
+	{
+		if(unlink("application/modules/controllers/".$argv[3].".controller.php"))
+		{
+			echo "Controller Named " . $argv[3] . "was successfully deleted";
+		}
+		else
+		{
+			echo "Error in Deleting Controller";
+		}
+	}
+
 }
+
+
+
 
 ?>
 
