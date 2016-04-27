@@ -16,7 +16,7 @@ static function set($string , $controller_method)
 		$data_to_pass = array();
 		$error = 0;
 
-if(count($broken_url) == count($broken_string))
+if(count($broken_url) == count($broken_string) && count($_POST) == 0 )
 	{
 		for ($i=0; $i < count($broken_url); $i++) 
 		{ 
