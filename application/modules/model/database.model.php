@@ -112,7 +112,7 @@ class table
 	// to get data
 	public function select($conditions = 1)
 	{
-		$query = "SELECT * FROM " . $this->name . " WHERE " . addslashes($conditions) . " ;";
+		$query = "SELECT * FROM " . $this->name . " WHERE " . $conditions . " ;";
 		$result = $this->connection->query($query);
 		{
 			if($result->num_rows > 0)
@@ -126,7 +126,8 @@ class table
 			}
 			else
 			{
-				return "Empty";
+				echo $this->connection->error;
+				return FALSE;
 			}
 		}
 	}
@@ -210,5 +211,3 @@ function database()
 	$database->table('users')->update(['NAME' => 'yash kumar verma']," `UID`= '1' ");
 }
 */
-
-
