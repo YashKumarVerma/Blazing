@@ -79,9 +79,13 @@ class model
 {
 	static function load($i)
 	{
-		if(file_exists("application/modules/model/".$i.".model.php"))
+		if(file_exists("application/modules/model/".$i.".model.php")  )
 		{
-			include "application/modules/model/".$i.".model.php";
+			if(!class_exists($i))
+			{
+				include "application/modules/model/".$i.".model.php";
+			}
+				
 		}
 		else
 		{
