@@ -9,7 +9,7 @@ class core
 | Small error handler
 | other data will be linked as xml
 ****************************************************************************/
-class error
+class err
 {
 	static function fatal($code,$message)
 	{
@@ -63,7 +63,7 @@ class render
  		}
  		else
  		{
- 			error::fatal('3','Undefined View Called !');
+ 			err::fatal('3','Undefined View Called !');
  		}
  	}
  }
@@ -89,7 +89,7 @@ class model
 		}
 		else
 		{
-			error::fatal('Model : 1 ','Undefined Model Called !');
+			err::fatal('Model : 1 ','Undefined Model Called !');
 		}
 	}
 }
