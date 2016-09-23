@@ -49,13 +49,13 @@ if(count($broken_url) == count($broken_string) && count($_POST) == 0 )
 					}
 				else
 					{
-						error::fatal('Route : 2','undefined function called !');
+						err::fatal('Route : 2','undefined function called !');
 					}
 				
 			}
 			else
 			{
-				error::fatal('Route : 1','undefined controller called');
+				err::fatal('Route : 1','undefined controller called');
 			}
 		}
 	}
@@ -104,13 +104,13 @@ static function post($string , $controller_method)
 							}
 						else
 							{
-								error::fatal('Route : 2','undefined function called !');
+								err::fatal('Route : 2','undefined function called !');
 							}
 						
 					}
 					else
 					{
-						error::fatal('Route : 1','undefined controller called');
+						err::fatal('Route : 1','undefined controller called');
 					}
 				}
 			}
