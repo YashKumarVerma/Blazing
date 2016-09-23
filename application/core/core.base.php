@@ -18,6 +18,10 @@ class io
 		{
 			return addslashes($_GET[$i]);
 		}
+		else
+		{
+			return 0;
+		}
 	}
 
 	static function post($i)
@@ -26,6 +30,11 @@ class io
 		{
 			return addslashes($_POST[$i]);
 		}
+		else
+		{
+			return 0;
+		}
+
 	}
 	
 	static function url()
