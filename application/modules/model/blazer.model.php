@@ -18,6 +18,10 @@ class blazer
 
 	function __construct($source = "application/public" , $cache = "application/public/blazing_compiled")
 	{
+		// if cache directory does not exist
+		if(!file_exists($cache))
+			mkdir($cache);
+
 		$this->source = $source;
 		$this->cache = $cache;
 	}
