@@ -1,3 +1,5 @@
+#ATTENTION : DEVELOPMENT IN PROGRESS
+
 # A (very) Lightweight PHP MVC Framework
 Light PHP MVC --latest branch
 
