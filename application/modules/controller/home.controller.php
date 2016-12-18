@@ -25,4 +25,7 @@ function blazer()
 function workspace()
 {
 	echo "hello !";
+
+	$db = new database();
+	
 }

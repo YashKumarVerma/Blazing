@@ -166,6 +166,9 @@ class table
 		}
 	}
 
+	// to increment a value by one
+	// prposed. pending code
+
 }
 
 
