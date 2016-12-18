@@ -26,6 +26,7 @@ function workspace()
 {
 	echo "hello !";
 
-	$db = new database();
-	
+	$mail = new PHPMailer;	
+
+	console($mail);
 }
