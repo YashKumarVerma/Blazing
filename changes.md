@@ -62,6 +62,8 @@
 	- To delete controller
 	~ $ php sahayak controller delete ControllerName
 
+	#### Extensions
+	- Integrated the famous PHP Mailer into extensions module
 
 	__TODO__
 	- blazing command to compile all template
