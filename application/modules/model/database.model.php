@@ -135,7 +135,7 @@ class table
 	// to delete that 
 	public function delete($condition = 1 )
 	{
-		$query = "DELETE FROM " . $this->name . " WHERE " . addslashes($condition) . " ;";
+		$query = "DELETE FROM " . $this->name . " WHERE " . $condition . " ;";
 		if($this->connection->query($query) == TRUE)
 		{
 			return TRUE;
