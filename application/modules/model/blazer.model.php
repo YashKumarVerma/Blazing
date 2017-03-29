@@ -145,12 +145,6 @@ class blazer
 			echo "AUTOLOAD FILE NOT FOUND !";		
 		}
 	}
-
-	static function css($link)
-	{
-		echo '<link rel="stylesheet" type="text/css" href="'.$GLOBALS['protected']['app']['assets']['css'].$link.'">';
-	}
-
 }
 
 /*
