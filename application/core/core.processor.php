@@ -1,10 +1,5 @@
 <?php 
 
-class core
-{
-	
-}
-
 /*************************************************************************** 
 | Small error handler
 | other data will be linked as xml
