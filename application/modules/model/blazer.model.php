@@ -93,8 +93,8 @@ class blazer
 			$this->content = str_replace('.}', '"> ', $this->content);
 
 			// {#file.js#}
-			$this->content = str_replace('{#', '<?php blazer::script("', $this->content);
-			$this->content = str_replace('#}', '"); ?>', $this->content);
+			$this->content = str_replace('{#', '<script type="text/javascript" src="'.$GLOBALS['protected']['app']['assets']['js'], $this->content);
+			$this->content = str_replace('#}', '"></script>', $this->content);
 
 			// {auto(bootstrap.json)}
 			$this->content = str_replace('{plugin(', '<?php blazer::plugin("', $this->content);
