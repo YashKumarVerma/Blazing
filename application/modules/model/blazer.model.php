@@ -122,11 +122,6 @@ class blazer
 		}
 	}
 
-	static function script($link)
-	{
-		echo '<script type="text/javascript" src="'.$GLOBALS['protected']['app']['assets']['js'].$link.'"></script>';
-	}
-
 	static function plugin($plugin_autoload_file)
 	{
 		if(file_exists("assets/plugins/".$plugin_autoload_file))
