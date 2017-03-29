@@ -60,6 +60,16 @@ function workspaceMail()
 	{
 	    echo 'Message has been sent';
 	}
+}
 
+function form(){
+	echo "<form method='post'> <select name='select[]' multiple>".
+	"<option val='1'>Some Option</option>".
+	"<option val='2'>Some other Option</option>".
+	"</select><input type='submit' /> </form>";
+}
 
+function post(){
+	console($_POST);
+	console(io::post('select'));
 }
