@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Blazing : The Fastest PHP Framework</title>
-        <?php blazer::css("home.css"); ?>
+        <link rel="stylesheet" type="text/css" href="http://localhost/blazing-php/blazing/master//assets/css/home.css"> 
         <style>
             html, body {
                 height: 100%;
