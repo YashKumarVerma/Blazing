@@ -79,6 +79,15 @@ class blazer
 			//  {{@name}}
 			$this->content = str_replace('{{@name', '<?php echo $GLOBALS["protected"]["app"]["name"]' , $this->content);
 
+			// {{@adminName}}
+			$this->content = str_replace('{{@adminName', '<?php echo $GLOBALS["protected"]["admin"]["name"]' , $this->content);
+			
+			// {{@adminEmail}}
+			$this->content = str_replace('{{@adminEmail', '<?php echo $GLOBALS["protected"]["admin"]["email"]' , $this->content);
+
+			// {{@adminContact}}
+			$this->content = str_replace('{{@name', '<?php echo $GLOBALS["protected"]["admin"]["contact"]' , $this->content);
+
 			// 	{.home.css.} -> loa css like a boss
 			$this->content = str_replace('{.', '<?php blazer::css("', $this->content);
 			$this->content = str_replace('.}', '"); ?>', $this->content);
