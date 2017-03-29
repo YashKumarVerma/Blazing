@@ -40,28 +40,6 @@ class controller
 
 /*************************************************************************** 
 | Views Class
-****************************************************************************/
-class render
- {
- 	static function view($file,$data=NULL)
- 	{
- 		if(file_exists("application/public/".$file.".php"))
- 		{
- 			if(is_array($data))
- 			{
- 				foreach ($data as $name => $value) 
-	 			{
-	 				$$name = $value;
-	 			}
- 			}
- 			include "application/public/".$file.".php";
- 		}
- 		else
- 		{
- 			err::fatal('3','Undefined View Called !');
- 		}
- 	}
- }
 
 /* ************************ USER FUNCTIONS *******************************/
 //  integrated to blazer files
