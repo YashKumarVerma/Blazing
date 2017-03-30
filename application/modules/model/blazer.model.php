@@ -80,13 +80,16 @@ class blazer
 			$this->content = str_replace('{{@name', '<?php echo $GLOBALS["protected"]["app"]["name"]' , $this->content);
 
 			// {{@adminName}}
-			$this->content = str_replace('{{@adminName', '<?php echo $GLOBALS["protected"]["admin"]["name"]' , $this->content);
+			$this->content = str_replace('{{@adminName', '<?php echo $GLOBALS["protected"]["app"]["admin"]["name"]' , $this->content);
 			
 			// {{@adminEmail}}
-			$this->content = str_replace('{{@adminEmail', '<?php echo $GLOBALS["protected"]["admin"]["email"]' , $this->content);
+			$this->content = str_replace('{{@adminEmail', '<?php echo $GLOBALS["protected"]["app"]["admin"]["email"]' , $this->content);
 
 			// {{@adminContact}}
-			$this->content = str_replace('{{@name', '<?php echo $GLOBALS["protected"]["admin"]["contact"]' , $this->content);
+			$this->content = str_replace('{{@adminContact', '<?php echo $GLOBALS["protected"]["app"]["admin"]["contact"]' , $this->content);
+
+			//  {{@subname}}
+			$this->content = str_replace('{{@subname', '<?php echo $GLOBALS["protected"]["app"]["subname"]' , $this->content);
 
 			// 	{.home.css.} -> loa css like a boss
 			$this->content = str_replace('{.', '<link rel="stylesheet" type="text/css" href="'.$GLOBALS['protected']['app']['assets']['css'], $this->content);
