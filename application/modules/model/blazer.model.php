@@ -69,6 +69,9 @@ class blazer
 			$this->content = file_get_contents($this->source . '/' . $file);
 			
 
+/*************************************
+ DECLARE TEMPLATES IN CORE PHP HERE 
+ *************************************/
 			//  {!data!}
 			$this->content = str_replace('{!', ' <?php echo htmlspecialchars($', $this->content);
 			$this->content = str_replace('!}', '); ?>', $this->content);
@@ -91,17 +94,21 @@ class blazer
 			//  {{@subname}}
 			$this->content = str_replace('{{@subname', '<?php echo $GLOBALS["protected"]["app"]["subname"]' , $this->content);
 
-			// 	{.home.css.} -> loa css like a boss
+			// 	{.home.} -> load css like a boss
 			$this->content = str_replace('{.', '<link rel="stylesheet" type="text/css" href="'.$GLOBALS['protected']['app']['assets']['css'], $this->content);
-			$this->content = str_replace('.}', '"> ', $this->content);
+			$this->content = str_replace('.}', '.css"> ', $this->content);
 
-			// {#file.js#}
+			// {#file#} -> load js like a boss
 			$this->content = str_replace('{#', '<script type="text/javascript" src="'.$GLOBALS['protected']['app']['assets']['js'], $this->content);
-			$this->content = str_replace('#}', '"></script>', $this->content);
+			$this->content = str_replace('#}', '.js"></script>', $this->content);
 
 			// {auto(bootstrap.json)}
 			$this->content = str_replace('{plugin(', '<?php blazer::plugin("', $this->content);
 			$this->content = str_replace(')}', '"); ?>', $this->content);
+
+/* CUSTOM TEMPLATES START */
+
+/* CUSTOM TEMPLATES ENDS */
 
 			// {{data}}
 			$this->content = str_replace('{{', '<?= $', $this->content);
