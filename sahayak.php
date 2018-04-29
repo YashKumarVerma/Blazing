@@ -35,7 +35,7 @@ $routeLine.=$argv[2].'\',\''.$controller.'@'.$method.'\');';
 // CONTROLLER DATA
 $controllerLine .= "function ".$method."(\$url){".PHP_EOL;
 foreach($parameterList as $node){
-    $controllerLine.= "\t".$node." = \$url['".$node."'];".PHP_EOL;
+    $controllerLine.= "\t".$node." = \$url['".substr($node, 1)."'];".PHP_EOL;
 }
 $controllerLine.= PHP_EOL."}";
 
