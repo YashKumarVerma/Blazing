@@ -1,10 +1,4 @@
-#ATTENTION : DEVELOPMENT IN PROGRESS
-
 # A (very) Lightweight PHP MVC Framework
-Light PHP MVC --latest branch
+Light PHP MVC 
 
-Download from https://github.com/Blazing-PHP/Blazing-The-Framework/releases/latest
-
-Documentation :http://blazing-php.github.io/Blazing-The-Framework
-
-Download extensions from https://github.com/Blazing-PHP/Blazing-The-Framework/tree/extensions
+Contributions needed.
