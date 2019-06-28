@@ -131,25 +131,6 @@ class blazer
 			include_once ($this->cache . '/' . $file . '.blazing.php');
 		}
 	}
-
-	static function plugin($plugin_autoload_file)
-	{
-		if(file_exists("assets/plugins/".$plugin_autoload_file))
-		{
-			$content = file_get_contents("assets/plugins/".$plugin_autoload_file);
-			$content = json_decode($content,TRUE);
-			foreach($content['css'] as $css){
-				echo '<link rel="stylesheet" type="text/css" href="'.$css.'">  '; 
-			}
-			foreach ($content['js'] as $js){
-					echo '<script type="text/javascript" src="'.$js.'"></script>';
-			}
-		}
-		else
-		{
-			echo "AUTOLOAD FILE NOT FOUND !";		
-		}
-	}
 }
 
 /*
